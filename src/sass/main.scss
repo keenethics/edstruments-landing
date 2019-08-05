@@ -112,3 +112,37 @@ body {
     }
   }
 }
+
+.mission {
+  background: #69afd3;
+  padding-top: 180px;
+  padding-bottom: 107px;
+
+  svg {
+    margin: auto;
+    display: block;
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin: 53px auto 39px;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    margin: 0;
+  }
+}
