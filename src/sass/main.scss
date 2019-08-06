@@ -31,6 +31,10 @@ html {
   height: 64px;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid #ffffff;
+
+  svg {
+    margin-left: 5px;
+  }
 }
 
 body {
@@ -177,7 +181,7 @@ body {
 
 .product {
   background: #ffffff;
-  padding: 67px 0 93px;
+  padding-top: 67px;
   background-image: url("/assets/img/bg_tracking_section.svg");
   background-position: left 60px;
   background-repeat: no-repeat;
@@ -227,7 +231,7 @@ body {
   .features {
     display: flex;
     flex-wrap: wrap;
-    padding: 95px 0 134px;
+    padding-top: 95px;
     margin: 0;
 
     .col {
@@ -350,6 +354,34 @@ body {
           padding-left: 32px;
           padding-right: 26px;
         }
+      }
+    }
+  }
+}
+
+.presentation {
+  height: 326px;
+  background: url("/assets/img/presentation_bg.jpg") center/cover no-repeat;
+
+  &-container {
+    background: rgba(66, 80, 92, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      display: inline-block;
+      border: 2px solid #ffffff;
+      background: transparent;
+      border-radius: 50%;
+      height: 68px;
+      width: 68px;
+      padding: 0;
+      cursor: pointer;
+
+      svg {
+        margin-left: 5px;
       }
     }
   }
