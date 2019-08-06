@@ -1,2 +1,4 @@
-import './sass/main.scss'
+import "./sass/main.scss";
+// const $ = require("jquery");
 
+// $(".carousel").carousel();

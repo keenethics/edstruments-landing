@@ -504,3 +504,75 @@ body {
     }
   }
 }
+
+.testimonials {
+  background: #69afd3;
+  padding: 96px 20px 76px;
+
+  & > h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.17rem;
+    line-height: 2.42rem;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
+
+  .carousel-item {
+    img {
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      margin: 0 auto 45px;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.8;
+      margin-bottom: 25px;
+    }
+    .client-name {
+      display: block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.83rem;
+      line-height: 1.25rem;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+    .client-company {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.67rem;
+      line-height: 1.05rem;
+      text-align: center;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.8;
+      margin-bottom: 70px;
+    }
+  }
+  .carousel-indicators {
+    margin-bottom: 0;
+
+    li {
+      background-color: #ffffff;
+      opacity: 0.5;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
