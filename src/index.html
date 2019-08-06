@@ -31,5 +31,26 @@
     ${require('./partials/product.html')} ${require('./partials/video.html')}
     ${require('./partials/whoweserve.html')}
     ${require('./partials/testimonials.html')}
+    ${require('./partials/ourhistory.html')}
   </body>
+
+  <script>
+    let more = false;
+
+    function toggleText() {
+      var text = "Here is some text that I want added to the HTML file";
+
+      if (more) {
+        document.querySelector("div.more").classList.add("hidden");
+        document.querySelector("button.show-more svg").classList.remove("up");
+
+        more = !more;
+      } else {
+        document.querySelector("div.more").classList.remove("hidden");
+        document.querySelector("button.show-more svg").classList.add("up");
+
+        more = !more;
+      }
+    }
+  </script>
 </html>

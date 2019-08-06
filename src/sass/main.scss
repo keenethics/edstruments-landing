@@ -588,3 +588,155 @@ body {
     }
   }
 }
+
+.our-history {
+  padding-bottom: 90px;
+
+  @include poly-fluid-sizing(
+    "padding-top",
+    (
+      767px: 37px,
+      1024px: 53px,
+      1400px: 100px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-bottom",
+    (
+      767px: 37px,
+      1024px: 53px,
+      1400px: 100px
+    )
+  );
+
+  @include poly-fluid-sizing(
+    "padding-left",
+    (
+      767px: 20px,
+      1024px: 125px,
+      1400px: 158px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-right",
+    (
+      767px: 20px,
+      1024px: 125px,
+      1400px: 158px
+    )
+  );
+
+  & > h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.17rem;
+    line-height: 2.42rem;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #42505c;
+    margin-bottom: 65px;
+  }
+
+  &-container {
+    display: flex;
+
+    @include breakpoint(xs) {
+      flex-wrap: wrap;
+    }
+
+    figure {
+      @include breakpoint(xs) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+        display: block;
+        height: 168px;
+        width: 168px;
+        border-radius: 50%;
+        margin: 0 20px 35px;
+      }
+
+      figcaption {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #42505c;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+
+        small {
+          display: block;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 0.9rem;
+          line-height: 0.8rem;
+          color: #42505c;
+          margin-top: 6px;
+
+          b {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &-story {
+      @include breakpoint(sm) {
+        padding-left: 94px;
+      }
+      @include breakpoint(md) {
+        padding-left: 149px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.83rem;
+        line-height: 1.5rem;
+        color: #42505c;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+        margin-bottom: 1rem;
+      }
+      button {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.83rem;
+        line-height: 1;
+        color: #aa4190;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        svg {
+          transition: all linear 0.1s;
+        }
+        svg.up {
+          transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+      }
+      div.more {
+        transition: all linear 0.1s;
+        opacity: 1;
+        height: auto;
+        overflow: hidden;
+      }
+      div.more.hidden {
+        opacity: 0;
+        height: 0;
+      }
+    }
+  }
+}
