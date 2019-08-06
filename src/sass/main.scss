@@ -575,4 +575,16 @@ body {
       }
     }
   }
+  .carousel-control-prev,
+  .carousel-control-next {
+    span {
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute;
+
+      @include breakpoint(lg-max) {
+        top: 16%;
+      }
+    }
+  }
 }
