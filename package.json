@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "start": "webpack-dev-server --mode development --open --progress"
+    "start": "webpack-dev-server --mode development --open --progress --content-base src --hot --inline"
   },
   "keywords": [
     "landing",
