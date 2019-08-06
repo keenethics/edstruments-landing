@@ -1,6 +1,17 @@
 @import "variables";
 @import "responsive-mixin";
+@import "fluid-typography";
+@import "poly-fluid-sizing";
 @import "~bootstrap/scss/bootstrap";
+
+$min_width: 320px;
+$max_width: 1400px;
+$min_font: 16px;
+$max_font: 24px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
 
 .here {
   border: 1px dashed red;
@@ -57,8 +68,8 @@ body {
 
     .nav-item {
       a.nav-link {
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 0.67rem;
+        line-height: 0.79rem;
         text-align: center;
         color: #f2f2f2;
         font-weight: 300;
@@ -71,8 +82,8 @@ body {
   h1 {
     font-style: normal;
     font-weight: bold;
-    font-size: 54px;
-    line-height: 66px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     text-align: center;
     letter-spacing: -1px;
     margin: 111px 10px 26px;
@@ -86,8 +97,8 @@ body {
     p {
       padding: 0;
       margin: 0 0 0 34px;
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 0.75rem;
+      line-height: 1.08rem;
     }
   }
   .content {
@@ -126,8 +137,8 @@ body {
   h2 {
     font-style: normal;
     font-weight: normal;
-    font-size: 52px;
-    line-height: 58px;
+    font-size: 2.17rem;
+    line-height: 2.42rem;
     text-align: center;
     letter-spacing: -1px;
     color: #ffffff;
@@ -137,12 +148,209 @@ body {
   p {
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 48px;
+    font-size: 1.08rem;
+    line-height: 2rem;
     text-align: center;
     color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.8;
     margin: 0;
+
+    @include poly-fluid-sizing(
+      "padding-left",
+      (
+        600px: 29px,
+        1024px: 200px,
+        1400px: 270px
+      )
+    );
+    @include poly-fluid-sizing(
+      "padding-right",
+      (
+        600px: 29px,
+        1024px: 200px,
+        1400px: 270px
+      )
+    );
+  }
+}
+
+.product {
+  background: #ffffff;
+  padding: 67px 0 93px;
+  background-image: url("/assets/img/bg_tracking_section.svg");
+  background-position: left 60px;
+  background-repeat: no-repeat;
+
+  @include breakpoint(lg-max) {
+    background-image: url("/assets/img/bg_tracking_section_2.svg");
+  }
+
+  & > h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.17rem;
+    line-height: 2.42rem;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #42505c;
+    margin: 0 0 35px 0;
+  }
+
+  & > p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #42505c;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    @include poly-fluid-sizing(
+      "padding-left",
+      (
+        600px: 29px,
+        1024px: 195px,
+        1400px: 313px
+      )
+    );
+    @include poly-fluid-sizing(
+      "padding-right",
+      (
+        600px: 29px,
+        1024px: 195px,
+        1400px: 313px
+      )
+    );
+  }
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 95px 0 134px;
+    margin: 0;
+
+    .col {
+      padding: 0;
+    }
+
+    & > div {
+      @include breakpoint(md-max) {
+        flex-basis: 100%;
+      }
+    }
+
+    &-item {
+      flex-basis: 50%;
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-bottom: 95px;
+
+      @include breakpoint(md-max) {
+        flex-basis: 100%;
+      }
+
+      &.tracking-section {
+        padding-top: 25px;
+      }
+
+      &.positioning-section {
+        background: url("/assets/img/bg_positioning_section.svg") right top/65%
+          auto no-repeat;
+
+        @include breakpoint(md) {
+          padding-top: 170px;
+        }
+      }
+
+      &.orders-section {
+        background: url("/assets/img/bg_orders_section.svg") left 100%/75% auto
+          no-repeat;
+
+        @include breakpoint(lg-max) {
+          background-image: url("/assets/img/bg_orders_section_2.svg");
+          background-position: left 60%;
+          background-size: 96% auto;
+        }
+        @include breakpoint(md) {
+          padding-bottom: 137px;
+        }
+      }
+
+      &.reports-section {
+        background: url("http://localhost:8080/assets/img/bg_reports_section.svg")
+          right center/75% auto no-repeat;
+
+        @include breakpoint(lg-max) {
+          background-position: 116% 67%;
+        }
+
+        @include breakpoint(md) {
+          padding-top: 170px;
+        }
+        @include breakpoint(md) {
+          padding-bottom: 137px;
+        }
+      }
+
+      img {
+        width: 100%;
+        margin-bottom: 55px;
+        display: block;
+        background: #fafafa;
+        box-shadow: 0px 0px 40px rgba(66, 80, 92, 0.15);
+        border-radius: 20px;
+        border-top: 26px solid #fafafa;
+        border-bottom: 26px solid #fafafa;
+        border-left: 17px solid #fafafa;
+        border-right: 17px solid #fafafa;
+      }
+
+      &-description {
+        display: flex;
+
+        p {
+          font-family: Assistant;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          color: #42505c;
+          mix-blend-mode: normal;
+          opacity: 0.8;
+        }
+
+        svg {
+          min-width: 100px;
+
+          @include breakpoint(lg-max) {
+            min-width: 80px;
+          }
+        }
+      }
+    }
+
+    .left-side {
+      .features-item {
+        padding-left: 90px;
+        padding-right: 45px;
+
+        @include breakpoint(lg-max) {
+          padding-left: 26px;
+          padding-right: 32px;
+        }
+      }
+    }
+    .right-side {
+      .features-item {
+        padding-left: 45px;
+        padding-right: 90px;
+
+        @include breakpoint(lg-max) {
+          padding-left: 32px;
+          padding-right: 26px;
+        }
+      }
+    }
   }
 }
