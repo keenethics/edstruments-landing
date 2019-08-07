@@ -659,7 +659,19 @@ body {
     )
   );
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMyIiBoZWlnaHQ9Ijc1OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCBvcGFjaXR5PSIuMSIgeD0iNTc3Ljg4MyIgeT0iNzU4LjAwOCIgd2lkdGg9IjcyNi42OTkiIGhlaWdodD0iMzk4LjE2OSIgcng9IjMwIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTQyLjU0NiA1NzcuODgzIDc1OC4wMDgpIiBmaWxsPSIjNjlBRkQzIi8+PC9zdmc+)
-    right -100% no-repeat;
+    no-repeat;
+  background-position-x: right;
+  @include poly-fluid-sizing(
+    "background-position-y",
+    (
+      1024px: 65px,
+      1400px: 110px
+    )
+  );
+
+  @include breakpoint(xs) {
+    background: none;
+  }
 
   & > h2 {
     font-style: normal;
