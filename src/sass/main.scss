@@ -775,3 +775,129 @@ body {
     }
   }
 }
+
+.our-advisors {
+  h2 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.83rem;
+    line-height: 2.42rem;
+    text-align: center;
+    letter-spacing: -2px;
+    color: #42505c;
+    @include poly-fluid-sizing(
+      "margin-bottom",
+      (
+        767px: 50px,
+        1024px: 59px,
+        1400px: 85px
+      )
+    );
+  }
+
+  &-items {
+    display: flex;
+    @include poly-fluid-sizing(
+      "padding-left",
+      (
+        768px: 58px,
+        1400px: 40px
+      )
+    );
+    @include poly-fluid-sizing(
+      "padding-right",
+      (
+        768px: 58px,
+        1400px: 40px
+      )
+    );
+
+    @include breakpoint(xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-item {
+      @include poly-fluid-sizing(
+        "padding-left",
+        (
+          768px: 0px,
+          1024px: 55px,
+          1400px: 115px
+        )
+      );
+      @include poly-fluid-sizing(
+        "padding-right",
+        (
+          768px: 0px,
+          1024px: 55px,
+          1400px: 115px
+        )
+      );
+
+      @include breakpoint(xs) {
+        margin-bottom: 35px;
+      }
+
+      img {
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        @include poly-fluid-sizing(
+          "height",
+          (
+            767px: 96px,
+            1024px: 99px,
+            1400px: 138px
+          )
+        );
+        @include poly-fluid-sizing(
+          "width",
+          (
+            767px: 96px,
+            1024px: 99px,
+            1400px: 138px
+          )
+        );
+        @include poly-fluid-sizing(
+          "margin-bottom",
+          (
+            767px: 18px,
+            1024px: 38px,
+            1400px: 45px
+          )
+        );
+      }
+      h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.83rem;
+        line-height: 1;
+        text-align: center;
+        color: #42505c;
+        margin-bottom: 10px;
+      }
+      span {
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.83rem;
+        line-height: 1;
+        text-align: center;
+        color: #42505c;
+        margin-bottom: 30px;
+      }
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #42505c;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+      }
+    }
+  }
+}
