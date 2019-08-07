@@ -510,14 +510,39 @@ body {
 }
 
 .testimonials {
-  background: url("/assets/img/testimonials/bg_testimonials_left.svg") left -230%/200px
-      auto no-repeat,
-    url("/assets/img/testimonials/bg_testimonials_right.svg") right 134%/200px
-      auto no-repeat,
+  background: url("http://localhost:8080/assets/img/testimonials/bg_testimonials_left.svg")
+      left -537%/250px auto no-repeat,
+    url("http://localhost:8080/assets/img/testimonials/bg_testimonials_right.svg")
+      right 186%/250px auto no-repeat,
     #69afd3;
-  padding: 96px 20px 76px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include poly-fluid-sizing(
+    "padding-top",
+    (
+      375px: 63px,
+      1024px: 76px,
+      1400px: 100px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-bottom",
+    (
+      375px: 63px,
+      1024px: 30px,
+      1400px: 76px
+    )
+  );
 
-  & > h1 {
+  @include breakpoint(md-max) {
+    background: url("/assets/img/testimonials/bg_testimonials_left.svg") left -230%/200px
+        auto no-repeat,
+      url("/assets/img/testimonials/bg_testimonials_right.svg") right 134%/200px
+        auto no-repeat,
+      #69afd3;
+  }
+
+  & > h2 {
     font-style: normal;
     font-weight: normal;
     font-size: 2.17rem;
@@ -525,14 +550,24 @@ body {
     text-align: center;
     letter-spacing: -1px;
     color: #ffffff;
+    margin-top: 0;
+    @include poly-fluid-sizing(
+      "margin-bottom",
+      (
+        375px: 35px,
+        1024px: 51px,
+        1400px: 74px
+      )
+    );
   }
 
   .carousel-item {
+    border: 1px dashed red;
     @include poly-fluid-sizing(
       "padding-left",
       (
         375px: 10px,
-        1024px: 100px,
+        1024px: 250px,
         1400px: 0px
       )
     );
@@ -540,16 +575,42 @@ body {
       "padding-right",
       (
         375px: 10px,
-        1024px: 100px,
+        1024px: 250px,
         1400px: 0px
       )
     );
 
     img {
-      height: 110px;
-      width: 110px;
+      @include poly-fluid-sizing(
+        "height",
+        (
+          375px: 110px,
+          1024px: 79px,
+          1400px: 110px
+        )
+      );
+      @include poly-fluid-sizing(
+        "width",
+        (
+          375px: 110px,
+          1024px: 79px,
+          1400px: 110px
+        )
+      );
+
       border-radius: 50%;
-      margin: 0 auto 45px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+
+      @include poly-fluid-sizing(
+        "margin-bottom",
+        (
+          375px: 61px,
+          1024px: 31px,
+          1400px: 44px
+        )
+      );
     }
     p {
       font-style: normal;
