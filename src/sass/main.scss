@@ -134,6 +134,22 @@ body {
   background: #69afd3;
   padding-top: 180px;
   padding-bottom: 107px;
+  @include poly-fluid-sizing(
+    "padding-top",
+    (
+      375px: 66px,
+      1024px: 101px,
+      1400px: 180px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-bottom",
+    (
+      375px: 72px,
+      1024px: 76px,
+      1400px: 107px
+    )
+  );
 
   svg {
     margin: auto;
@@ -183,10 +199,25 @@ body {
 
 .product {
   background: #ffffff;
-  padding-top: 67px;
   background-image: url("/assets/img/bg_tracking_section.svg");
   background-position: left 60px;
   background-repeat: no-repeat;
+  @include poly-fluid-sizing(
+    "padding-top",
+    (
+      375px: 45px,
+      1024px: 57px,
+      1400px: 67px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-bottom",
+    (
+      375px: 20px,
+      1024px: 57px,
+      1400px: 69px
+    )
+  );
 
   @include breakpoint(lg-max) {
     background-image: url("/assets/img/bg_tracking_section_2.svg");
@@ -987,5 +1018,279 @@ body {
         opacity: 0.8;
       }
     }
+  }
+}
+
+.contact-us {
+  background: url("/assets/img/contact-us/bg_contact_us_panels.png")
+      center/cover no-repeat,
+    linear-gradient(
+      180deg,
+      #fff 20.65%,
+      rgba(255, 255, 255, 0.65) 58.11%,
+      #fff 97.22%
+    ),
+    url("/assets/img/contact-us/mockps.jpg") center no-repeat;
+  @include poly-fluid-sizing(
+    "padding-top",
+    (
+      767px: 20px,
+      1024px: 41px,
+      1400px: 56px
+    )
+  );
+  @include poly-fluid-sizing(
+    "padding-bottom",
+    (
+      767px: 97px,
+      1024px: 72px,
+      1400px: 138px
+    )
+  );
+  h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.67rem;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #42505c;
+    text-align: center;
+  }
+  &-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1.25re;
+    text-align: center;
+    color: #42505c;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+
+    @include poly-fluid-sizing(
+      "padding-left",
+      (
+        767px: 97px,
+        1024px: 72px,
+        1400px: 138px
+      )
+    );
+    @include poly-fluid-sizing(
+      "padding-right",
+      (
+        767px: 97px,
+        1024px: 72px,
+        1400px: 138px
+      )
+    );
+  }
+
+  form {
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 4px;
+    background: #fff;
+    @include poly-fluid-sizing(
+      "margin-left",
+      (
+        767px: 15px,
+        1024px: 150px,
+        1400px: 250px
+      )
+    );
+    @include poly-fluid-sizing(
+      "margin-right",
+      (
+        767px: 15px,
+        1024px: 150px,
+        1400px: 250px
+      )
+    );
+    // @include poly-fluid-sizing(
+    //   "margin-bottom",
+    //   (
+    //     767px: 97px,
+    //     1024px: 72px,
+    //     1400px: 138px
+    //   )
+    // );
+    @include poly-fluid-sizing(
+      "margin-top",
+      (
+        767px: 30px,
+        1024px: 45px,
+        1400px: 45px
+      )
+    );
+
+    .input-wrap {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 16px;
+
+      @include breakpoint(mobile) {
+        flex-wrap: wrap;
+      }
+
+      div {
+        flex-basis: calc(50% - 8px);
+        padding-right: 8px;
+
+        @include breakpoint(mobile) {
+          flex-basis: 100%;
+          padding-right: 0;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 0.47rem 0.79rem;
+        border: 1px solid #69afd3;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.58rem;
+        line-height: 1;
+        color: #42505c;
+        display: block;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    textarea {
+      padding: 0.47rem 0.79rem;
+      border: 1px solid #69afd3;
+      border-radius: 4px;
+      flex-basis: calc(50% - 8px);
+      font-weight: normal;
+      font-size: 0.58rem;
+      line-height: 1;
+      color: #42505c;
+      flex-grow: 1;
+      margin-left: 8px;
+      resize: none;
+
+      @include breakpoint(mobile) {
+        margin-top: 16px;
+        flex-basis: 100%;
+        margin-left: 0;
+        min-height: 300px;
+      }
+    }
+
+    button {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 0.58rem;
+      line-height: 1;
+      text-align: center;
+      color: #ffffff;
+      padding: 16px 19px;
+    }
+
+    foofter {
+      display: flex;
+
+      @include breakpoint(mobile) {
+        flex-wrap: wrap;
+      }
+
+      button {
+        flex-basis: 50%;
+
+        @include breakpoint(mobile) {
+          flex-basis: 100%;
+        }
+      }
+
+      .checkbox {
+        margin-left: 10px;
+        flex-basis: calc(50% - 8px);
+
+        @include breakpoint(mobile) {
+          margin-bottom: 54px;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+div.checkbox input {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    color: #42505c;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: text-top;
+    width: 11px;
+    height: 11px;
+    background: white;
+    border: 1px solid #69afd3;
+    border-radius: 2px;
+    margin-top: 5px;
+  }
+
+  // Box hover
+  &:hover + label:before {
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #69afd3;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 10px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
   }
 }
