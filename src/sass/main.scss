@@ -31,6 +31,8 @@ html {
   height: 64px;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
 
   svg {
     margin-left: 5px;
@@ -379,6 +381,8 @@ body {
       width: 68px;
       padding: 0;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
 
       svg {
         margin-left: 5px;
