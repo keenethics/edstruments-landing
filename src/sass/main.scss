@@ -1119,14 +1119,6 @@ body {
         1400px: 250px
       )
     );
-    // @include poly-fluid-sizing(
-    //   "margin-bottom",
-    //   (
-    //     767px: 97px,
-    //     1024px: 72px,
-    //     1400px: 138px
-    //   )
-    // );
     @include poly-fluid-sizing(
       "margin-top",
       (
@@ -1306,5 +1298,70 @@ div.checkbox input {
     box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
       4px -6px 0 white, 4px -8px 0 white;
     transform: rotate(45deg);
+  }
+}
+.page-footer {
+  &-content {
+    display: flex;
+    margin: 57px 0;
+    justify-content: space-between;
+
+    @include breakpoint(sm-max) {
+      flex-direction: column;
+    }
+
+    @include poly-fluid-sizing(
+      "padding-left",
+      (
+        767px: 30px,
+        1024px: 169px,
+        1400px: 253px
+      )
+    );
+    @include poly-fluid-sizing(
+      "padding-right",
+      (
+        767px: 30px,
+        1024px: 169px,
+        1400px: 253px
+      )
+    );
+
+    svg {
+      margin: auto;
+
+      @include breakpoint(sm-max) {
+        order: 1;
+      }
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(sm-max) {
+        flex-direction: column;
+      }
+
+      a:not(:last-child) {
+        margin-right: 55px;
+        @include breakpoint(sm-max) {
+          margin-right: 0;
+        }
+      }
+      a {
+        display: inline-block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #42505c;
+        margin-top: 6px;
+
+        @include breakpoint(sm-max) {
+          margin-bottom: 40px;
+        }
+      }
+    }
   }
 }
