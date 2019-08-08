@@ -99,6 +99,21 @@ body {
     );
     align-items: center;
 
+    .btn-sign-in {
+      @include poly-fluid-sizing(
+        "margin-left",
+        (
+          768px: 10px,
+          1024px: 30px,
+          1400px: 40px
+        )
+      );
+
+      @include breakpoint(sm-max) {
+        margin-left: 0;
+      }
+    }
+
     .btn-violet {
       font-size: 0.67rem;
       line-height: 1;
@@ -158,8 +173,7 @@ body {
           (
             768px: 12px,
             1024px: 25px,
-            1400px: 40px,
-            1920px: 47px
+            1400px: 20px
           )
         );
         @include poly-fluid-sizing(
@@ -167,8 +181,7 @@ body {
           (
             768px: 12px,
             1024px: 25px,
-            1400px: 40px,
-            1920px: 47px
+            1400px: 20px
           )
         );
       }
