@@ -1400,11 +1400,11 @@ body {
       "margin-top",
       (
         320px: 96px,
-        1024px: 72px,
-        1400px: 940px
+        1024px: 72px
       )
     );
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
