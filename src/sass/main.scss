@@ -882,7 +882,7 @@ body {
       mix-blend-mode: normal;
       opacity: 0.8;
       margin-bottom: 25px;
-      font-size: 16px;
+      font-size: 0.83rem;
       line-height: 28px;
 
       @include breakpoint(md-max) {
@@ -899,6 +899,10 @@ body {
       text-align: center;
       color: #ffffff;
       margin-bottom: 5px;
+
+      @include breakpoint(mobile) {
+        font-size: 20px;
+      }
     }
     .client-company {
       display: block;
@@ -911,6 +915,10 @@ body {
       mix-blend-mode: normal;
       opacity: 0.8;
       margin-bottom: 70px;
+
+      @include breakpoint(mobile) {
+        font-size: 16px;
+      }
     }
   }
   .carousel-indicators {
@@ -1239,6 +1247,10 @@ body {
         text-align: center;
         color: #42505c;
         margin-bottom: 10px;
+
+        @include breakpoint(mobile) {
+          font-size: 20px;
+        }
       }
       span {
         display: block;
@@ -1249,6 +1261,10 @@ body {
         text-align: center;
         color: #42505c;
         margin-bottom: 30px;
+
+        @include breakpoint(mobile) {
+          font-size: 16px;
+        }
       }
       p {
         font-style: normal;
