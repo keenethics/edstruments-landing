@@ -618,7 +618,14 @@ body {
     text-align: center;
     letter-spacing: -1px;
     color: #42505c;
-    margin-bottom: 100px;
+    @include poly-fluid-sizing(
+      "margin-bottom",
+      (
+        767px: 37px,
+        1024px: 53px,
+        1400px: 100px
+      )
+    );
   }
   &-items {
     display: flex;
@@ -629,6 +636,10 @@ body {
 
     &-item {
       padding: 0 35px 0;
+
+      @include breakpoint(xs) {
+        margin-bottom: 54px;
+      }
 
       @include poly-fluid-sizing(
         "padding-left",
@@ -687,6 +698,7 @@ body {
         opacity: 0.8;
         font-size: 18px;
         line-height: 30px;
+        margin: 0;
 
         @include breakpoint(md-max) {
           font-size: 16px;
@@ -760,9 +772,13 @@ body {
   @include poly-fluid-sizing(
     "background-position-y",
     (
-      576px: 151px,
-      1024px: 87px,
-      1400px: 7px
+      320px: 113px,
+      375px: 95px,
+      658px: 164px,
+      768px: 104px,
+      1024px: 64px,
+      1200px: 43px,
+      1400px: -50px
     )
   );
   @include poly-fluid-sizing(
@@ -786,7 +802,7 @@ body {
     background-size: 110%;
   }
   @include breakpoint(mobile) {
-    background-position-y: 50px;
+    background-position-y: 89px;
   }
 
   & > h2 {
