@@ -127,7 +127,7 @@ body {
       }
 
       @include breakpoint(lg) {
-        padding: 0.4rem 1.65rem !important;
+        padding: 0.55rem 1.65rem !important;
       }
     }
 
@@ -188,6 +188,10 @@ body {
             1400px: 20px
           )
         );
+      }
+      &.btn-contact-us a.nav-link,
+      &.btn-sign-in a.nav-link {
+        color: #fff;
       }
     }
   }
