@@ -628,12 +628,17 @@ body {
       p {
         font-style: normal;
         font-weight: normal;
-        font-size: 0.58rem;
-        line-height: 1.05rem;
+        font-size: 18px;
+        line-height: 30px;
         text-align: center;
         color: #42505c;
         mix-blend-mode: normal;
         opacity: 0.8;
+
+        @include breakpoint(md-max) {
+          font-size: 16px;
+          line-height: 26px;
+        }
       }
 
       &.hr {
