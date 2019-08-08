@@ -1365,3 +1365,19 @@ div.checkbox input {
     }
   }
 }
+
+#videoModal {
+  .modal-content {
+    border: none;
+    background: transparent;
+    margin: auto;
+  }
+  iframe {
+    display: block;
+    margin: auto;
+  }
+}
+
+.modal-backdrop.show {
+  opacity: 0.8 !important;
+}
