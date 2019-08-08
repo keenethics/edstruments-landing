@@ -62,7 +62,11 @@ body {
     z-index: -1;
   }
   .navbar {
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      transparent 100%
+    );
     @include poly-fluid-sizing(
       "padding-left",
       (
