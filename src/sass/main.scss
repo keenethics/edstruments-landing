@@ -546,6 +546,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: background-color linear .1s;
+
+      &:hover {
+        background-color: #aa4190;
+      }
 
       svg {
         margin-left: 5px;
@@ -1341,12 +1346,17 @@ body {
       border-radius: 4px;
       flex-basis: calc(50% - 8px);
       font-weight: normal;
-      font-size: 0.58rem;
-      line-height: 1;
+      font-size: 16px;
+      line-height: 1.2;
       color: #42505c;
       flex-grow: 1;
       margin-left: 8px;
       resize: none;
+
+      @include breakpoint(md-max) {
+        font-size: 14px;
+        line-height: 1.65;
+      }
 
       @include breakpoint(mobile) {
         margin-top: 16px;
@@ -1386,7 +1396,7 @@ body {
       }
 
       .checkbox {
-        margin-left: 10px;
+        margin-left: 0.79rem;
         flex-basis: calc(50% - 8px);
 
         @include breakpoint(mobile) {
