@@ -546,7 +546,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: background-color linear .1s;
+      transition: background-color linear 0.1s;
 
       &:hover {
         background-color: #aa4190;
@@ -1204,9 +1204,8 @@ body {
   @include poly-fluid-sizing(
     "padding-bottom",
     (
-      767px: 97px,
-      1024px: 72px,
-      1400px: 138px
+      320px: 96px,
+      1024px: 72px
     )
   );
 
@@ -1424,6 +1423,7 @@ body {
     );
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
   }
 }
 
