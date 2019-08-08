@@ -688,6 +688,7 @@ body {
         text-align: center;
         letter-spacing: -0.5px;
         color: #42505c;
+        margin-bottom: 14px;
       }
       p {
         font-style: normal;
@@ -1261,7 +1262,7 @@ body {
         line-height: 1;
         text-align: center;
         color: #42505c;
-        margin-bottom: 30px;
+        margin-bottom: 34px;
 
         @include breakpoint(mobile) {
           font-size: 16px;
@@ -1333,8 +1334,7 @@ body {
         rgba(255, 255, 255, 0.65) 91%,
         #fff 93.22%
       ),
-      url("/assets/img/contact-us/mockps.jpg") right
-        top/cover no-repeat;
+      url("/assets/img/contact-us/mockps.jpg") right top/cover no-repeat;
   }
 
   h2 {
@@ -1380,6 +1380,14 @@ body {
         1400px: 400px
       )
     );
+
+    a {
+      color: #aa4190;
+
+      &:hover {
+        color: #aa4190;
+      }
+    }
   }
 
   form {
@@ -1510,7 +1518,7 @@ body {
       }
 
       button {
-        flex-basis: 50%;
+        flex-basis: calc(50% + 16px);
 
         @include breakpoint(mobile) {
           flex-basis: 100%;
@@ -1519,7 +1527,7 @@ body {
 
       .checkbox {
         margin-left: 0.79rem;
-        flex-basis: calc(50% - 8px);
+        flex-basis: calc(50% + 16px - 0.79rem);
 
         @include breakpoint(mobile) {
           margin-bottom: 54px;
