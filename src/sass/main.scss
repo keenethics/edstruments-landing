@@ -1409,6 +1409,7 @@ body {
         color: #42505c;
         display: block;
         box-shadow: none;
+        -webkit-appearance: none;
 
         @include breakpoint(md-max) {
           font-size: 14px;
@@ -1434,6 +1435,7 @@ body {
       margin-left: 8px;
       resize: none;
       box-shadow: none;
+      -webkit-appearance: none;
 
       @include breakpoint(md-max) {
         font-size: 14px;
