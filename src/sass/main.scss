@@ -1279,7 +1279,7 @@ body {
   );
 
   @include breakpoint(lg) {
-    background: url("http://localhost:8080/assets/img/contact-us/bg_contact_us_panels.png")
+    background: url("/assets/img/contact-us/bg_contact_us_panels.png")
         center -200px/100% auto no-repeat,
       linear-gradient(
         180deg,
@@ -1287,11 +1287,11 @@ body {
         rgba(255, 255, 255, 0.65) 58.11%,
         #fff 97.22%
       ),
-      url("http://localhost:8080/assets/img/contact-us/mockps.jpg") center/cover
+      url("/assets/img/contact-us/mockps.jpg") center/cover
         no-repeat;
   }
   @include breakpoint(mobile) {
-    background: url("http://localhost:8080/assets/img/contact-us/bg_contact_us_panels.png")
+    background: url("/assets/img/contact-us/bg_contact_us_panels.png")
         center/cover no-repeat,
       linear-gradient(
         180deg,
@@ -1299,7 +1299,7 @@ body {
         rgba(255, 255, 255, 0.65) 91%,
         #fff 93.22%
       ),
-      url("http://localhost:8080/assets/img/contact-us/mockps.jpg") center/cover
+      url("/assets/img/contact-us/mockps.jpg") center/cover
         no-repeat;
   }
 
