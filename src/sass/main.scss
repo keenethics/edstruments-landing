@@ -386,8 +386,22 @@ body {
 
     &-item {
       flex-basis: 50%;
-      padding-left: 70px;
-      padding-right: 70px;
+      @include poly-fluid-sizing(
+        "padding-left",
+        (
+          375px: 20px,
+          1024px: 23px,
+          1400px: 90px
+        )
+      );
+      @include poly-fluid-sizing(
+        "padding-right",
+        (
+          375px: 20px,
+          1024px: 23px,
+          1400px: 90px
+        )
+      );
       padding-bottom: 95px;
 
       @include breakpoint(md-max) {
@@ -444,6 +458,21 @@ body {
         border-bottom: 26px solid #fafafa;
         border-left: 17px solid #fafafa;
         border-right: 17px solid #fafafa;
+
+        @include breakpoint(md-max) {
+          border-top: 12px solid #fafafa;
+          border-bottom: 12px solid #fafafa;
+          border-left: 12px solid #fafafa;
+          border-right: 12px solid #fafafa;
+        }
+
+        @include breakpoint(sm-max) {
+          border-top: 10px solid #fafafa;
+          border-bottom: 10px solid #fafafa;
+          border-left: 10px solid #fafafa;
+          border-right: 10px solid #fafafa;
+          border-radius: 8px;
+        }
       }
 
       &-description {
