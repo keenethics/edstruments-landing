@@ -413,23 +413,23 @@ body {
 
         @include breakpoint(lg-max) {
           background-image: url("/assets/img/bg_orders_section_2.svg");
-          background-position: left 60%;
+          background-position: left bottom;
           background-size: 96% auto;
+          background-repeat: no-repeat;
         }
         @include breakpoint(md) {
-          padding-bottom: 137px;
+          padding-bottom: 150px;
         }
       }
 
       &.reports-section {
-        background: url("http://localhost:8080/assets/img/bg_reports_section.svg")
-          right center/75% auto no-repeat;
+        background-image: url("http://localhost:8080/assets/img/bg_reports_section.svg");
+        background-position: right bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-        @include breakpoint(lg-max) {
-          background-position: 116% 67%;
-        }
         @include breakpoint(md) {
-          padding-bottom: 137px;
+          padding-bottom: 0;
         }
       }
 
