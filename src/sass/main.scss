@@ -108,12 +108,16 @@ body {
       color: #ffffff;
 
       @include breakpoint(mobile) {
-        padding: 14px 22px;
+        padding: 9px 17px;
       }
     }
 
     .navbar-toggler {
       border: none;
+
+      @include breakpoint(mobile) {
+        padding: 0;
+      }
 
       .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
@@ -125,12 +129,17 @@ body {
 
       @include breakpoint(mobile) {
         height: 18px;
+        margin: 0;
       }
     }
 
     .navbar-brand {
       padding: 0;
       line-height: 1;
+
+      @include breakpoint(mobile) {
+        margin: 0;
+      }
     }
 
     .nav-item {
@@ -401,10 +410,6 @@ body {
 
         @include breakpoint(lg-max) {
           background-position: 116% 67%;
-        }
-
-        @include breakpoint(md) {
-          padding-top: 170px;
         }
         @include breakpoint(md) {
           padding-bottom: 137px;
