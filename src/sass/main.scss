@@ -460,17 +460,11 @@ body {
         border-right: 17px solid #fafafa;
 
         @include breakpoint(md-max) {
-          border-top: 12px solid #fafafa;
-          border-bottom: 12px solid #fafafa;
-          border-left: 12px solid #fafafa;
-          border-right: 12px solid #fafafa;
+          border: 12px solid #fafafa;
         }
 
         @include breakpoint(sm-max) {
-          border-top: 10px solid #fafafa;
-          border-bottom: 10px solid #fafafa;
-          border-left: 10px solid #fafafa;
-          border-right: 10px solid #fafafa;
+          border: 10px solid #fafafa;
           border-radius: 8px;
         }
       }
@@ -1163,7 +1157,7 @@ body {
       rgba(255, 255, 255, 0.65) 58.11%,
       #fff 97.22%
     ),
-    url("/assets/img/contact-us/mockps.jpg") center no-repeat;
+    url("/assets/img/contact-us/mockps.jpg") center/cover no-repeat;
   @include poly-fluid-sizing(
     "padding-top",
     (
@@ -1190,7 +1184,7 @@ body {
         rgba(255, 255, 255, 0.65) 91%,
         #fff 93.22%
       ),
-      url("http://localhost:8080/assets/img/contact-us/mockps.jpg") center
+      url("http://localhost:8080/assets/img/contact-us/mockps.jpg") center/cover
         no-repeat;
   }
 
@@ -1364,6 +1358,25 @@ body {
       }
     }
   }
+  hr {
+    border-top: 1px solid #69afd3;
+    @include poly-fluid-sizing(
+      "max-width",
+      (
+        320px: 306px,
+        1400px: 940px
+      )
+    );
+    @include poly-fluid-sizing(
+      "margin-top",
+      (
+        320px: 96px,
+        1024px: 72px,
+        1400px: 940px
+      )
+    );
+    margin: auto;
+  }
 }
 
 div.checkbox input {
@@ -1443,37 +1456,30 @@ div.checkbox input {
   }
 }
 .page-footer {
+  @include poly-fluid-sizing(
+    "max-width",
+    (
+      320px: 306px,
+      1400px: 940px
+    )
+  );
+  margin: auto;
+
   &-content {
     display: flex;
-    margin: 57px 0;
+    margin: 0 0 57px;
     justify-content: space-between;
 
     @include breakpoint(sm-max) {
       flex-direction: column;
     }
 
-    @include poly-fluid-sizing(
-      "padding-left",
-      (
-        767px: 30px,
-        1024px: 169px,
-        1400px: 253px
-      )
-    );
-    @include poly-fluid-sizing(
-      "padding-right",
-      (
-        767px: 30px,
-        1024px: 169px,
-        1400px: 253px
-      )
-    );
-
     svg {
-      margin: auto;
+      margin-right: 20px;
 
       @include breakpoint(sm-max) {
         order: 1;
+        margin: auto;
       }
     }
     &-links {
@@ -1486,6 +1492,10 @@ div.checkbox input {
 
       a:not(:last-child) {
         margin-right: 55px;
+
+        @include breakpoint(md-max) {
+          margin-right: 25px;
+        }
         @include breakpoint(sm-max) {
           margin-right: 0;
         }
