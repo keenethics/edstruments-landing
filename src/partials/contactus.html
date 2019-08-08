@@ -8,18 +8,42 @@
   <form action="">
     <div class="input-wrap">
       <div>
-        <input type="text" name="fullName" id="fullName" />
-        <input type="email" name="email" id="email" />
-        <input type="tel" name="phoneNumber" id="phoneNumber" />
-        <input type="text" name="title" id="title" />
-        <input type="text" name="schoolDistrict" id="schoolDistrict" />
+        <input
+          type="text"
+          name="fullName"
+          id="fullName"
+          placeholder="Full Name"
+        />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input
+          type="tel"
+          name="phoneNumber"
+          id="phoneNumber"
+          placeholder="Phone number (optional)"
+        />
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Title (optional)"
+        />
+        <input
+          type="text"
+          name="schoolDistrict"
+          id="schoolDistrict"
+          placeholder="Employer/School District (optional)"
+        />
       </div>
-      <textarea name="" id=""></textarea>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Tell us what you'd like to know"
+      ></textarea>
     </div>
     <foofter class="">
       <div class="checkbox">
         <input type="checkbox" name="requestDemo" id="requestDemo" />
-        <label for="requestDemo">Request a demo</label>
+        <label for="requestDemo">I'd like to request a demo</label>
       </div>
       <button class="btn btn-violet" type="submit">Submit contact form</button>
     </foofter>

@@ -1330,6 +1330,10 @@ body {
       text-align: center;
       color: #ffffff;
       padding: 16px 19px;
+
+      &:hover {
+        color: #fff;
+      }
     }
 
     foofter {
