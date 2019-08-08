@@ -1109,7 +1109,8 @@ body {
 
         @include breakpoint(xs) {
           display: block;
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         &:hover {
