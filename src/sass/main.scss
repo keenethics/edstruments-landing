@@ -125,6 +125,10 @@ body {
       @include breakpoint(mobile) {
         padding: 9px 17px;
       }
+
+      @include breakpoint(lg) {
+        padding: 0.4rem 1.65rem !important;
+      }
     }
 
     .navbar-toggler {
@@ -832,7 +836,6 @@ body {
 }
 
 .our-history {
-  padding-bottom: 90px;
   @include poly-fluid-sizing(
     "padding-top",
     (
