@@ -1312,7 +1312,7 @@ body {
   );
 
   @include breakpoint(lg) {
-    background: url("/assets/img/contact-us/bg_contact_us_panels.png") center -200px/100%
+    background: url("/assets/img/contact-us/bg_contact_us_panels.png") center -122px/100%
         auto no-repeat,
       linear-gradient(
         180deg,
@@ -1323,15 +1323,17 @@ body {
       url("/assets/img/contact-us/mockps.jpg") center/cover no-repeat;
   }
   @include breakpoint(mobile) {
-    background: url("/assets/img/contact-us/bg_contact_us_panels.png")
+    background: url("http://localhost:8080/assets/img/contact-us/bg_contact_us_panels.png")
         center/cover no-repeat,
       linear-gradient(
         180deg,
-        #fff 20.65%,
+        #fff 15.65%,
+        rgba(255, 255, 255, 0.65) 35%,
         rgba(255, 255, 255, 0.65) 91%,
         #fff 93.22%
       ),
-      url("/assets/img/contact-us/mockps.jpg") center/cover no-repeat;
+      url("http://localhost:8080/assets/img/contact-us/mockps.jpg") right
+        top/cover no-repeat;
   }
 
   h2 {
