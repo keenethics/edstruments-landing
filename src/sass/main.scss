@@ -1091,6 +1091,11 @@ body {
         border: 0;
         background: transparent;
 
+        @include breakpoint(xs) {
+          display: block;
+          margin: auto;
+        }
+
         &:hover {
           text-decoration: none;
         }
