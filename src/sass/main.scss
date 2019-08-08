@@ -33,6 +33,7 @@ html {
   border: 1px solid #ffffff;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   svg {
     margin-left: 5px;
@@ -544,6 +545,7 @@ body {
       cursor: pointer;
       display: flex;
       justify-content: center;
+      align-items: center;
 
       svg {
         margin-left: 5px;
@@ -1141,8 +1143,8 @@ body {
       p {
         font-style: normal;
         font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 1.25rem;
+        font-size: 18px;
+        line-height: 1.2;
         text-align: center;
         color: #42505c;
         mix-blend-mode: normal;
@@ -1294,10 +1296,15 @@ body {
         border-radius: 4px;
         font-style: normal;
         font-weight: normal;
-        font-size: 0.58rem;
-        line-height: 1;
+        font-size: 16px;
+        line-height: 2.25;
         color: #42505c;
         display: block;
+
+        @include breakpoint(md-max) {
+          font-size: 14px;
+          line-height: 1.65;
+        }
 
         &:not(:last-child) {
           margin-bottom: 16px;
