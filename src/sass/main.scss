@@ -325,7 +325,7 @@ body {
   @include poly-fluid-sizing(
     "padding-bottom",
     (
-      375px: 20px,
+      375px: 10px,
       1024px: 57px,
       1400px: 69px
     )
@@ -378,6 +378,13 @@ body {
     flex-wrap: wrap;
     padding-top: 95px;
     margin: 0;
+    @include poly-fluid-sizing(
+      "padding-top",
+      (
+        576px: 23px,
+        1400px: 95px
+      )
+    );
 
     .col {
       padding: 0;
@@ -405,6 +412,14 @@ body {
           375px: 20px,
           1024px: 23px,
           1400px: 90px
+        )
+      );
+      @include poly-fluid-sizing(
+        "padding-bottom",
+        (
+          375px: 43px,
+          1024px: 50px,
+          1400px: 60px
         )
       );
       padding-bottom: 95px;
@@ -463,6 +478,15 @@ body {
         border-bottom: 26px solid #fafafa;
         border-left: 17px solid #fafafa;
         border-right: 17px solid #fafafa;
+
+        @include poly-fluid-sizing(
+          "margin-bottom",
+          (
+            576px: 28px,
+            1024px: 44px,
+            1400px: 57px
+          )
+        );
 
         @include breakpoint(md-max) {
           border: 12px solid #fafafa;
