@@ -596,8 +596,22 @@ body {
       );
 
       img {
-        height: 100px;
-        width: 100px;
+        @include poly-fluid-sizing(
+          "height",
+          (
+            576px: 114px,
+            1024px: 95px,
+            1400px: 138px
+          )
+        );
+        @include poly-fluid-sizing(
+          "width",
+          (
+            576px: 114px,
+            1024px: 95px,
+            1400px: 138px
+          )
+        );
         border-radius: 50%;
         display: block;
         margin: 40px auto 40px;
@@ -628,13 +642,13 @@ body {
           "background-position-x",
           (
             767px: 20px,
-            1024px: 35px,
-            1400px: 60px
+            1024px: 55px,
+            1400px: 110px
           )
         );
 
         @include breakpoint(xs) {
-          background-position-x: 30%;
+          background-position-x: 33%;
         }
       }
       &.community {
@@ -644,13 +658,13 @@ body {
           "background-position-x",
           (
             767px: 20px,
-            1024px: 35px,
-            1400px: 60px
+            1024px: 55px,
+            1400px: 110px
           )
         );
 
         @include breakpoint(xs) {
-          background-position-x: 30%;
+          background-position-x: 33%;
         }
       }
       &.leaders {
@@ -659,13 +673,13 @@ body {
           "background-position-x",
           (
             767px: 20px,
-            1024px: 35px,
-            1400px: 60px
+            1024px: 55px,
+            1400px: 110px
           )
         );
 
         @include breakpoint(xs) {
-          background-position-x: 30%;
+          background-position-x: 33%;
         }
       }
     }
