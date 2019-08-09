@@ -27,15 +27,12 @@
     <header class="hero">
       ${require('./partials/nav.html')}
     </header>
-    ${require('./partials/mission.html')}
-    ${require('./partials/product.html')}
-    ${require('./partials/video.html')}
-    ${require('./partials/whoweserve.html')}
+    ${require('./partials/mission.html')} ${require('./partials/product.html')}
+    ${require('./partials/video.html')} ${require('./partials/whoweserve.html')}
     ${require('./partials/testimonials.html')}
     ${require('./partials/ourhistory.html')}
     ${require('./partials/ouradvisors.html')}
-    ${require('./partials/contactus.html')}
-    ${require('./partials/footer.html')}
+    ${require('./partials/contactus.html')} ${require('./partials/footer.html')}
     ${require('./partials/modal.html')}
   </body>
 
@@ -56,6 +53,19 @@
 
         more = !more;
       }
+    }
+
+    function scrollToId(event) {
+      const id = event.target.getAttribute("data-scrolltoid");
+      const navbarHeight = document.querySelector(".navbar").scrollHeight;
+      const navbarCollapseHeight = document.querySelector(".navbar-collapse")
+        .scrollHeight;
+      const top =
+        document.getElementById(id).offsetTop -
+        navbarHeight +
+        navbarCollapseHeight;
+
+      window.scrollTo({ top, behavior: "smooth" });
     }
   </script>
 </html>

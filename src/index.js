@@ -19,3 +19,4 @@ document.addEventListener(
 window.addEventListener("scroll", function() {
   scrollPositionCheck();
 });
+
