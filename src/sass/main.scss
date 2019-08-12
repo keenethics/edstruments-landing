@@ -1954,3 +1954,18 @@ div.checkbox input {
     }
   }
 }
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  @include breakpoint(md-max) {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.linked-in {
+    background: url("/assets/img/linked-in.png") center/contain no-repeat;
+  }
+}
