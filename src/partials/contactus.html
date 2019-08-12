@@ -47,7 +47,17 @@
         <input type="checkbox" name="requestDemo" id="requestDemo" />
         <label for="requestDemo">I'd like to request a demo</label>
       </div>
-      <button class="btn btn-violet" type="submit">Submit contact form</button>
+      <button
+        data-toggle="modal"
+        data-target="#thanksModal"
+        class="btn btn-violet"
+        type="button"
+        onclick="function(event){
+          event.preventDefault()
+        }"
+      >
+        Submit contact form
+      </button>
     </foofter>
   </form>
   <hr />
