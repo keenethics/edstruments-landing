@@ -71,7 +71,7 @@ body {
     @include poly-fluid-sizing(
       "padding-left",
       (
-        375px: 20px,
+        768px: 20px,
         1024px: 35px,
         1400px: 75px,
         1920px: 105px
@@ -80,7 +80,7 @@ body {
     @include poly-fluid-sizing(
       "padding-right",
       (
-        375px: 20px,
+        768px: 20px,
         1024px: 45px,
         1400px: 75px,
         1920px: 105px
@@ -106,12 +106,28 @@ body {
     );
     align-items: center;
 
+    &.expanded {
+      background: #fff;
+      justify-content: flex-start;
+
+      .expanded-hidden {
+        display: none !important;
+      }
+
+      .logo {
+        @include breakpoint(sm-max) {
+          margin-left: 50px;
+        }
+      }
+    }
+
     .navbar-brand svg #text {
       transition: fill linear 0.1s;
       fill: #fff;
     }
 
-    &.detached {
+    &.detached,
+    &.expanded {
       background: white;
       box-shadow: 0px 0px 40px rgba(66, 80, 92, 0.15);
 
@@ -149,6 +165,15 @@ body {
 
       @include breakpoint(sm-max) {
         margin-left: 0;
+        text-align: center;
+      }
+
+      a.nav-link {
+        @include breakpoint(sm-max) {
+          font-size: 20px;
+          text-align: center;
+          display: inline-block !important;
+        }
       }
     }
 
@@ -160,8 +185,10 @@ body {
       text-align: center;
       color: #ffffff;
 
-      @include breakpoint(mobile) {
+      @include breakpoint(sm-max) {
+        display: block !important;
         padding: 9px 17px;
+        text-align: center;
       }
 
       @include breakpoint(lg) {
@@ -211,7 +238,6 @@ body {
         padding-left: 20px;
         padding-right: 20px;
         margin-top: 4px;
-
         @include poly-fluid-sizing(
           "padding-left",
           (
@@ -228,11 +254,53 @@ body {
             1400px: 20px
           )
         );
+
+        @include breakpoint(sm-max) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 28px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: #42505c;
+
+          margin-top: 0px;
+          // margin-bottom: 50px;
+          margin-bottom: 13px;
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
       &.btn-contact-us a.nav-link,
       &.btn-sign-in a.nav-link {
         color: #fff;
       }
+      &:nth-child(4) a.nav-link {
+        @include breakpoint(sm-max) {
+          margin-bottom: 98px;
+        }
+      }
+    }
+    .navbar-nav {
+      @include breakpoint(sm-max) {
+        padding-top: 72px;
+        padding-bottom: 32px;
+      }
+      @include poly-fluid-sizing(
+        "padding-left",
+        (
+          375px: 47px,
+          576px: 57px
+        )
+      );
+      @include poly-fluid-sizing(
+        "padding-right",
+        (
+          375px: 47px,
+          576px: 57px
+        )
+      );
     }
   }
 

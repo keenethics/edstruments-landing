@@ -40,8 +40,6 @@
     let more = false;
 
     function toggleText() {
-      var text = "Here is some text that I want added to the HTML file";
-
       if (more) {
         document.querySelector("div.more").classList.add("hidden");
         document.querySelector("button.show-more svg").classList.remove("up");
@@ -66,6 +64,10 @@
         navbarCollapseHeight;
 
       window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    function toggleNavbarCollapsedMode(event) {
+      document.querySelector("nav.navbar").classList.toggle("expanded");
     }
   </script>
 </html>
