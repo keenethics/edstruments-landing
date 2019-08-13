@@ -15,6 +15,7 @@
           name="fullName"
           id="fullName"
           placeholder="Full Name"
+          aria-label="Full Name"
         />
         <input type="email" name="email" id="email" placeholder="Email" />
         <input
@@ -22,30 +23,41 @@
           name="phoneNumber"
           id="phoneNumber"
           placeholder="Phone number (optional)"
+          aria-label="Phone number (optional)"
         />
         <input
           type="text"
           name="title"
           id="title"
           placeholder="Title (optional)"
+          aria-label="Title (optional)"
         />
         <input
           type="text"
           name="schoolDistrict"
           id="schoolDistrict"
           placeholder="Employer/School District (optional)"
+          aria-label="Employer/School District (optional)"
         />
       </div>
       <textarea
         name="message"
         id="message"
         placeholder="Tell us what you'd like to know"
+        aria-label="Tell us what you'd like to know. Write us a message."
       ></textarea>
     </div>
     <foofter class="">
       <div class="checkbox">
-        <input type="checkbox" name="requestDemo" id="requestDemo" />
-        <label for="requestDemo">I'd like to request a demo</label>
+        <input
+          type="checkbox"
+          name="requestDemo"
+          id="requestDemo"
+          aria-labelledby="requestDemoLabel"
+        />
+        <label id="requestDemoLabel" for="requestDemo"
+          >I'd like to request a demo</label
+        >
       </div>
       <button
         data-toggle="modal"
