@@ -89,6 +89,11 @@ module.exports = {
       inject: "body",
       filename: "terms-of-service.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "src/pages/privacy-policy.html",
+      inject: "body",
+      filename: "privacy-policy.html"
+    }),
     ...envPlugins
   ],
   optimization: {

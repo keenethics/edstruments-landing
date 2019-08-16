@@ -44,7 +44,8 @@ body {
   * {
     font-family: "Assistant", sans-serif;
   }
-  &.terms-of-use {
+  &.terms-of-service,
+  &.privacy-policy {
     @include poly-fluid-sizing(
       "padding-top",
       (
@@ -85,6 +86,10 @@ body {
       &.expanded {
         box-shadow: 0px 0px 40px rgba(66, 80, 92, 0.45);
       }
+    }
+
+    p {
+      text-align: justify;
     }
   }
 }
