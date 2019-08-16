@@ -94,6 +94,11 @@ module.exports = {
       inject: "body",
       filename: "privacy-policy.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "src/pages/careers.html",
+      inject: "body",
+      filename: "careers.html"
+    }),
     ...envPlugins
   ],
   optimization: {

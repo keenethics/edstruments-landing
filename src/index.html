@@ -33,14 +33,13 @@
     <!-- ${require('./partials/testimonials.html')} -->
     ${require('./partials/ourhistory.html')}
     ${require('./partials/ouradvisors.html')}
-    ${require('./partials/contactus.html')}
-    ${require('./partials/footer.html')}
+    ${require('./partials/contactus.html')} ${require('./partials/footer.html')}
     ${require('./partials/modal.html')}
     ${require('./partials/thanksmodal.html')}
   </body>
 
   <script>
-    let more = false;
+    var more = false;
 
     function toggleText() {
       if (more) {
@@ -56,12 +55,12 @@
       }
     }
 
-    function scrollToId(event) {
-      const id = event.target.getAttribute("data-scrolltoid");
-      const navbarHeight = document.querySelector(".navbar").scrollHeight;
-      const navbarCollapseHeight = document.querySelector(".navbar-collapse")
+    function scrollToId(event, elementId) {
+      var id = elementId || event.target.getAttribute("data-scrolltoid");
+      var navbarHeight = document.querySelector(".navbar").scrollHeight;
+      var navbarCollapseHeight = document.querySelector(".navbar-collapse")
         .scrollHeight;
-      const top =
+      var top =
         document.getElementById(id).offsetTop -
         navbarHeight +
         navbarCollapseHeight;
@@ -71,6 +70,20 @@
 
     function toggleNavbarCollapsedMode(event) {
       document.querySelector("nav.navbar").classList.toggle("expanded");
+    }
+
+    function removeHash() {
+      var loc = window.location;
+      if ("pushState" in history)
+        history.pushState("", document.title, loc.pathname + loc.search);
+    }
+
+    var hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        scrollToId(null, hash.slice(1));
+        removeHash();
+      }, 500);
     }
   </script>
 </html>
