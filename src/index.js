@@ -2,9 +2,9 @@ import "./sass/main.scss";
 
 function scrollPositionCheck() {
   if (window.scrollY < 10) {
-    document.querySelector(".hero .navbar").classList.remove("detached");
+    document.querySelector(".navbar").classList.remove("detached");
   } else {
-    document.querySelector(".hero .navbar").classList.add("detached");
+    document.querySelector(".navbar").classList.add("detached");
   }
 }
 
